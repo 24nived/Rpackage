@@ -39,7 +39,7 @@ server <- function(input, output) {
   output$bar_chart <- renderPlot({
     req(data())
     ggplot(data(), aes(x = Team, y = Goals)) +
-      geom_bar(stat = "identity", fill = "skyblue") +
+      geom_bar(stat = "identity", fill = "red") +
       labs(title = "Team Goals", x = "Team", y = "Goals") +
       theme_minimal()
   })
